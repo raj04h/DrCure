@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DrCure</string>
+    <string name="drug_ic50_predictor">Drug IC50 Predictor</string>
+</resources>

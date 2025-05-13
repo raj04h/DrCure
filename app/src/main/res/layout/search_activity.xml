@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="#E1EAF4"
+    android:id="@+id/search_lay">
+
+    <!-- Search AutoCompleteTextView for drugs -->
+    <AutoCompleteTextView
+        android:id="@+id/search_autocomplete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/search_bar"
+        android:completionThreshold="1"
+        android:hint="Search drugs..."
+        android:textColor="@color/black"
+        android:textColorHint="#AE737775"
+        android:autofillHints="name"
+        android:padding="20dp"
+        android:textSize="16sp"
+        android:inputType="text"
+        android:imeOptions="actionSearch" />
+
+    <!-- Search AutoCompleteTextView for diseases -->
+    <AutoCompleteTextView
+        android:id="@+id/disease_auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_autocomplete"
+        android:layout_alignParentStart="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/search_bar"
+        android:completionThreshold="1"
+        android:hint="Search diseases..."
+        android:textColor="@color/black"
+        android:textColorHint="#AE737775"
+        android:autofillHints="name"
+        android:padding="20dp"
+        android:textSize="16sp"
+        android:inputType="text"
+        android:imeOptions="actionSearch" />
+
+    <!-- ScrollView for displaying search results for drugs -->
+    <ScrollView
+        android:id="@+id/drug_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/disease_auto"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <TableLayout
+            android:id="@+id/drug_stable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:stretchColumns="*" />
+    </ScrollView>
+
+    <!-- ScrollView for displaying search results for diseases -->
+    <ScrollView
+        android:id="@+id/disease_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/drug_scroll"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <TableLayout
+            android:id="@+id/disease_stable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:stretchColumns="*" />
+    </ScrollView>
+
+    <!-- Placeholder for additional animated views -->
+    <ViewAnimator
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/disease_scroll"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="20dp" />
+
+</RelativeLayout>

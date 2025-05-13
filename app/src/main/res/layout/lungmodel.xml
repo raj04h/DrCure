@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Heading -->
+        <TextView
+            android:id="@+id/tv_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Liver Disease Predictor"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="16dp"/>
+
+        <!-- CardView for Inputs -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:layout_marginBottom="16dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_bilirubin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Total Bilirubin"
+                    android:inputType="numberDecimal"/>
+
+                <EditText
+                    android:id="@+id/et_alk_phosphotase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Alkaline Phosphotase"
+                    android:inputType="numberDecimal"/>
+
+                <EditText
+                    android:id="@+id/et_sgot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="SGOT (Aspartate Aminotransferase)"
+                    android:inputType="numberDecimal"/>
+
+                <EditText
+                    android:id="@+id/et_proteins"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Total Proteins"
+                    android:inputType="numberDecimal"/>
+
+                <EditText
+                    android:id="@+id/et_albumin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Albumin"
+                    android:inputType="numberDecimal"/>
+
+                <EditText
+                    android:id="@+id/et_ag_ratio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Albumin/Globulin Ratio"
+                    android:inputType="numberDecimal"/>
+
+                <Button
+                    android:id="@+id/btn_predict"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Predict Health"
+                    android:layout_marginTop="12dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Result TextView outside CardView -->
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Result will appear here"
+            android:textSize="18sp"
+            android:paddingTop="8dp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+    </LinearLayout>
+</ScrollView>
